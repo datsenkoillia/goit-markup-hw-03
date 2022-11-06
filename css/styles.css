@@ -6,12 +6,41 @@
   --color-selection: #2196f3;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   color: var(--color-primary);
   background-color: var(--background-primary);
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 .link {
@@ -34,13 +63,42 @@ body {
   list-style-type: none;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .section-name {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* --------Header----------*/
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+}
 
 .logo-text {
   font-family: 'Raleway', sans-serif;
@@ -58,11 +116,29 @@ body {
   color: #000000;
 }
 
+.logo-header {
+  margin-right: 93px;
+}
+
+.header-nav-list,
+.header-contact-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav {
+  display: flex;
+  margin-right: auto;
+}
+
 .nav-link {
   color: inherit;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .current-link {
@@ -74,15 +150,20 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 /* --------Hero----------*/
 
 .hero-section {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: #2f303a;
 }
 
 .hero-title {
+  width: 696px;
   color: #ffffff;
   font-weight: 900;
   font-size: 44px;
@@ -90,19 +171,23 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .hero-order-button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  padding: 10px 32px;
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-order-button:hover,
@@ -112,11 +197,21 @@ body {
 
 /* --------Features----------*/
 
+.features {
+}
+
+.features-list {
+  display: flex;
+  gap: 30px;
+  margin-bottom: -94px;
+}
+
 .features-item {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--color-primary);
+  margin-bottom: 10px;
 }
 .features-text {
   color: var(--color-secondary);
@@ -125,6 +220,11 @@ body {
 
 /* --------What-do-we-do----------*/
 
+.do-list {
+  display: flex;
+  gap: 30px;
+}
+
 /* --------Team----------*/
 .team-members-section {
   background: var(--background-secondary);
@@ -132,6 +232,19 @@ body {
 
 .team-member-item {
   background-color: var(--background-primary);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.member-list {
+  display: flex;
+  gap: 30px;
+}
+
+.team-member-description {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-member-name {
@@ -139,6 +252,7 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .team-member-title {
@@ -152,6 +266,13 @@ body {
 /* --------Footer----------*/
 .footer {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo-footer {
+  display: block;
+  margin-bottom: 20px;
 }
 
 .logo-white {
@@ -166,11 +287,22 @@ body {
 
 .contact-link-footer {
   line-height: 1.71;
-  color:rgba(255, 255, 255, 0.6);;
+  color: rgba(255, 255, 255, 0.6);
   font-style: normal;
 }
 
+.footer-contact-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 /* --------Portfolio-----------*/
+
+.portfolio-buttons-list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 
 .portfolio-filter-button {
   font-weight: 500;
@@ -181,6 +313,9 @@ body {
   color: var(--color-primary);
   background: #f5f4fa;
   border-radius: 4px;
+  padding: 6px 22px;
+
+  /* margin-bottom: 50px; */
 }
 
 .portfolio-filter-button:hover,
@@ -191,9 +326,21 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .project-item {
   background: #ffffff;
-  border: 1px solid #eeeeee;
+  /* border: 1px solid #eeeeee; */
+}
+
+.project-description {
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .project-name {
