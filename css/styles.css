@@ -91,8 +91,6 @@ body {
 /* --------Header----------*/
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
   border: 1px solid #ececec;
 }
 
@@ -118,18 +116,22 @@ body {
 
 .logo-header {
   margin-right: 93px;
+  display: block;
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
 }
 
 .header-nav-list,
 .header-contact-list {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
 }
 
 .nav {
   display: flex;
   margin-right: auto;
+  align-items: center;
 }
 
 .nav-link {
@@ -139,6 +141,7 @@ body {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+  display: block;
 }
 
 .current-link {
@@ -152,6 +155,7 @@ body {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+  display: block;
 }
 
 /* --------Hero----------*/
@@ -203,7 +207,6 @@ body {
 .features-list {
   display: flex;
   gap: 30px;
-  margin-bottom: -94px;
 }
 
 .features-item {
@@ -219,6 +222,9 @@ body {
 }
 
 /* --------What-do-we-do----------*/
+.do-we-do {
+  padding-top: 0;
+}
 
 .do-list {
   display: flex;
